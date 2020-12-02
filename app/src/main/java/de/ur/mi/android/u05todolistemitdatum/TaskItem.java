@@ -2,14 +2,19 @@ package de.ur.mi.android.u05todolistemitdatum;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.Objects;
 
 public class TaskItem {
 
-    public TaskItem(String task, String date) {
+    private String task;
+    private GregorianCalendar date;
 
+    public TaskItem(String task, String date) {
+        this.task = task;
+        this.date = getDateFromString(date);
     }
 
     private GregorianCalendar getDateFromString(String date) {
@@ -31,6 +36,10 @@ public class TaskItem {
                 Locale.GERMANY);
 
         return df.format(date.getTime());
+    }
+
+    public String getTask() {
+        return task;
     }
 
 }
