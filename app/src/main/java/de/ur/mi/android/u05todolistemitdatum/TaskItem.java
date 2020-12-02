@@ -42,4 +42,8 @@ public class TaskItem {
         return task;
     }
 
+    public String getDate() {
+        return getFormattedDate(date);
+    }
+
 }

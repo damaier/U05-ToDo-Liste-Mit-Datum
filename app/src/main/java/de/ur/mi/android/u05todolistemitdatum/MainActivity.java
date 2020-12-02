@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private ImageButton btnAdd;
     private ListView listView;
     private ArrayAdapter<String> adapter;
+    private ToDoListAdapter adapter2;
     private ArrayList<String> todoList;
 
     @Override
@@ -42,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     private void setupViews() {
         todoList = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, todoList);
+        //adapter = new ToDoListAdapter(this, android.R.layout.simple_list_item_1, todoList);
+        adapter2 = new ToDoListAdapter(this, android.R.layout.simple_list_item_1, todoList);
         listView.setAdapter(adapter);
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
