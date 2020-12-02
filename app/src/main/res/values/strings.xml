@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">U05-ToDo-Liste-Mit-Datum</string>
+    <string name="todo_header">Aktuelle Aufgaben</string>
+    <string name="todo_task_hint">Neue Aufgabe</string>
+</resources>
