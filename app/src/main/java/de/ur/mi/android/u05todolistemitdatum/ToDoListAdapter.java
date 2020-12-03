@@ -18,6 +18,7 @@ public class ToDoListAdapter  extends ArrayAdapter<TaskItem> {
 
     public ToDoListAdapter(@NonNull Context context, int resource, ArrayList list) {
         super(context, resource,list);
+        taskList = list;
     }
 
 
